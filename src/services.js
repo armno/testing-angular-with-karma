@@ -2,9 +2,9 @@
 	angular.module('myApp', [])
 		.factory('Person', Person);
 
-	Person.$inject = ['visitor'];
+	Person.$inject = ['visitor', '$http'];
 
-	function Person(visitor) {
+	function Person(visitor, $http) {
 		return function Person(name) {
 			this.name = name;
 			this.greet = function() {
@@ -13,6 +13,10 @@
 				} else {
 					return 'Hey, ' + this.name + '!';
 				}
+			};
+
+			this.create = function() {
+				return $http.post('/people', this);
 			};
 		};
 	}

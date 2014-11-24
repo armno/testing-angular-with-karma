@@ -2,6 +2,8 @@
 	angular.module('myApp', [])
 		.factory('Person', Person);
 
+	Person.$inject = ['visitor'];
+
 	function Person(visitor) {
 		return function Person(name) {
 			this.name = name;

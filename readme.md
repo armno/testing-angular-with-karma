@@ -1,0 +1,1 @@
+from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-karma

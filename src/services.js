@@ -1,5 +1,5 @@
 (function() {
-	angular.module('myApp', [])
+	angular.module('myApp')
 		.factory('Person', Person);
 
 	Person.$inject = ['visitor', '$http'];

@@ -10,3 +10,7 @@ from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-kar
 ### 2nd test: `Person.greet()` method
 - The tutorial writes code first then test. I should (and actually am doing) write test first then code after.
 - Injecting a service's dependency into the test, use `$provide` service.
+
+### 3rd test: `Person.create()` method
+- `$httpBackend` isn't that scary. injected as a service like `Person` service.
+- `$httpBackend.flush()` - flush pending http requests and fulfill with mocked response.

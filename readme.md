@@ -14,3 +14,7 @@ from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-kar
 ### 3rd test: `Person.create()` method
 - `$httpBackend` isn't that scary. injected as a service like `Person` service.
 - `$httpBackend.flush()` - flush pending http requests and fulfill with mocked response.
+
+### 4th test: `PersonController`
+- there is not much about testing controllers in the tutorial.
+- initiating controller spec is pretty much like service spec, with extra of creating controller and child `$scope` from `$rootScope`.

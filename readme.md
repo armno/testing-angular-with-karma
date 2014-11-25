@@ -3,7 +3,7 @@ from this tutorial: https://www.airpair.com/angularjs/posts/testing-angular-with
 # What I have learned
 
 ### First test: `Person` Factory
-- `Person` variable in `personSpec` is use to keep local reference to `Person` factory in the test. Makes `Person` factory available for every tests.
+- `Person` variable in `personSpec` is used to keep local reference to `Person` factory in the test. Makes `Person` factory available for every tests.
 - `ngMock` does something with `_` magic with injected module. To inject a module in `beforeEach` block, append and prepend `_` to the injected module name.
 - `to.have.property` checks if the object has given property and also if it has expected value. If we pass only 1 argument to this assertion, it will check only if the object has a property.
 
@@ -18,7 +18,7 @@ from this tutorial: https://www.airpair.com/angularjs/posts/testing-angular-with
 - there is not much about testing controllers in the tutorial.
 - initiating controller spec is pretty much like service spec, with extra of creating controller and child `$scope` from `$rootScope`.
 
-### 5th test: 'welcome' directive
+### 5th test: `welcome` directive
 - inject `$rootScope` to create a child scope like for controller testing.
 - create a directive element: use `$compile` with `scope`. this will eventually create and compile the directive element.
 - `Person` object can be mocked (in `scope`) for testing since we are not testing the Person service here.
@@ -33,7 +33,7 @@ from this tutorial: https://www.airpair.com/angularjs/posts/testing-angular-with
 
 ### In general
 - PhantomJS can be also used instead of Chrome in karma config.
-- The tutorial writes code first then test. I should (and actually am doing) write test first then code after, which is OK since the article is not about TDD but about setting Karma with Angular project.
+- The tutorial writes code first then test. I should (and actually was doing) write test first then code after, which is OK since the article is not about TDD but about setting Karma with Angular project.
 - I typed literally every single charater in code examples. And eventually found some typos. Typing along instead of copy and paste really helps.
 
 armno - 2014.11.25

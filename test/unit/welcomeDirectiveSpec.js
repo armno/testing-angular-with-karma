@@ -19,4 +19,21 @@ describe('Welcome Directive', function() {
 
 		expect(element.find('h1').text()).to.equal('Hello! Welcome to the app!');
 	});
+
+	it('displays the person s favorite color on hover', function() {
+		scope.person = {
+			greet: function () {
+				return 'Hello';
+			},
+			favoriteColor: 'blue'
+		};
+
+		scope.$digest();
+
+		element.triggerHandler('mouseenter');
+		expect(element.css('color')).to.equal('blue');
+
+		element.triggerHandler('mouseleave');
+		expect(element.css('color')).to.be.empty;
+	});
 });

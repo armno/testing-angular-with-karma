@@ -1,4 +1,4 @@
-from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-karma
+from this tutorial: https://www.airpair.com/angularjs/posts/testing-angular-with-karma
 
 # What I have learned
 
@@ -8,7 +8,6 @@ from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-kar
 - `to.have.property` checks if the object has given property and also if it has expected value. If we pass only 1 argument to this assertion, it will check only if the object has a property.
 
 ### 2nd test: `Person.greet()` method
-- The tutorial writes code first then test. I should (and actually am doing) write test first then code after.
 - Injecting a service's dependency into the test, use `$provide` service.
 
 ### 3rd test: `Person.create()` method
@@ -31,3 +30,10 @@ from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-kar
 - `scope.$digest()` actually applies `scope` variables to the template (directive).
 - `element.triggerHandler()` manually triggers DOM events (which is cool!)
 - assertions are done on updated DOM element of the directive.
+
+### In general
+- PhantomJS can be also used instead of Chrome in karma config.
+- The tutorial writes code first then test. I should (and actually am doing) write test first then code after, which is OK since the article is not about TDD but about setting Karma with Angular project.
+- I typed literally every single charater in code examples. And eventually found some typos. Typing along instead of copy and paste really helps.
+
+armno - 2014.11.25

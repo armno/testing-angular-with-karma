@@ -25,3 +25,9 @@ from this tuts: https://www.airpair.com/angularjs/posts/testing-angular-with-kar
 - `Person` object can be mocked (in `scope`) for testing since we are not testing the Person service here.
 - `scope.$digest()` runs the digest loop manually. (digest loop is called automatically when the application runs)
 - assertion: check if compiled directive has expected output (text is fine)
+
+### 6th test: DOM manipulation in directive
+- mock the `person` object in `it` block. a.k.a. each test has different `scope` environment.
+- `scope.$digest()` actually applies `scope` variables to the template (directive).
+- `element.triggerHandler()` manually triggers DOM events (which is cool!)
+- assertions are done on updated DOM element of the directive.
